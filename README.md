@@ -4,15 +4,23 @@
 ```
 
 # Install dependencies
+
 yarn add w-basic-layout
+
 or
+
 npm install w-basic-layout --save
 
 # quick start
-main.js文件
+
+main.js文件中引用并注册全局组件
+
 import Layout from 'w-basic-layout'
+
 Vue.use(Layout)
 
+
+# 页面中使用
 <layout>
   <div>
 
