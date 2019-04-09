@@ -2,28 +2,16 @@
 
 ## Project setup
 ```
-yarn install
-```
+yarn add w-basic-layout
+import Layout from 'w-basic-layout'
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+<layout>
+  <div>
 
-### Compiles and minifies for production
+  </div>
+</layout>
 ```
-yarn run build
-```
+# Contributors
 
-### Run your tests
-```
-yarn run test
-```
+王增彬 📧 775905727@qq.com 
 
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
