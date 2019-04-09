@@ -34,7 +34,7 @@ export default {
   mixins: [ResizeMixin],
   data () {
     return {
-      dropdownItemList: [{ icon: 'notice', itemName: '公告', itemChild: [{ itemChildName: '消息', itemChildNum: 3 }] }]
+      dropdownItemList: [{ icon: 'notice', itemName: '公告', itemChild: [{ itemChildName: '消息', itemChildNum: 3, path: '', link: 'https://www.baidu.com' }] }]
     }
   },
   computed: {
