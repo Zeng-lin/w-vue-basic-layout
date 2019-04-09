@@ -4,7 +4,14 @@
       <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
       <sidebar class="sidebar-container" :sidebar="sidebar" :routes="routes" />
       <div class="main-container">
-        <navbar @toggleSideBar="toggleSideBar" :sidebar="sidebar" :userInfo="userInfo" @logout="logout" />
+        <navbar
+          @toggleSideBar="toggleSideBar"
+          :sidebar="sidebar"
+          :userInfo="userInfo"
+          @logout="logout"
+          :dropdownItemList="dropdownItemList"
+        />
+
         <chuanghui-portal-main>
           <slot></slot>
         </chuanghui-portal-main>
@@ -40,6 +47,10 @@ export default {
     userInfo: {
       type: Object,
       default: () => ({})
+    },
+    dropdownItemList: {
+      type: Array,
+      default: () => ([])
     }
   },
   data () {

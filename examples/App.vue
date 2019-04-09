@@ -10,11 +10,12 @@
     <Layout
       @toggleSideBar="toggleSideBar"
       @handleClickOutside="handleClickOutside"
+      @logout="logout"
       :sidebar="sidebar"
       :device="device"
       :routes="routes"
       :userInfo="userInfo"
-      @logout="logout"
+      :dropdownItemList="dropdownItemList"
     >
       <div id="navdf">
         <router-link to="/">Home</router-link> |
@@ -31,6 +32,11 @@ import ResizeMixin from './mixin/ResizeHandler'
 export default {
   // 这个mixins是为了初始化状态栏的状态，具体见原文件
   mixins: [ResizeMixin],
+  data () {
+    return {
+      dropdownItemList: [{ icon: 'notice', itemName: '公告', itemChild: [{ itemChildName: '消息', itemChildNum: 3 }] }]
+    }
+  },
   computed: {
     ...mapGetters([
       'sidebar',

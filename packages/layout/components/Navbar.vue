@@ -2,6 +2,7 @@
   <div class="navbar">
     <hamburger :toggle-click="toggleSideBar" :is-active="sidebar.opened" class="hamburger-container" />
     <breadcrumb />
+    <dropdown-message :dropdownItemList="dropdownItemList"></dropdown-message>
     <el-dropdown class="avatar-container" trigger="click">
       <div class="avatar-wrapper">
         <img :src="userInfo.avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
@@ -25,6 +26,7 @@
 import { mapGetters } from 'vuex'
 import Vue from 'vue'
 import Breadcrumb from '../../components/Breadcrumb'
+import DropdownMessage from '../../components/DropdownMessage'
 import Hamburger from '../../components/Hamburger'
 import { Dropdown, DropdownMenu, DropdownItem } from 'element-ui'
 
@@ -34,7 +36,8 @@ Vue.use(DropdownItem)
 export default {
   components: {
     Breadcrumb,
-    Hamburger
+    Hamburger,
+    DropdownMessage
   },
   props: {
     sidebar: {
@@ -44,6 +47,10 @@ export default {
     userInfo: {
       type: Object,
       default: () => ({})
+    },
+    dropdownItemList: {
+      type: Array,
+      default: () => ([])
     }
   },
   data () {

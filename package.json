@@ -1,6 +1,6 @@
 {
   "name": "w-vue-basic-layout",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "the pc basic layout for project",
   "main": "lib/w-basic-layout.umd.min.js",
   "private": false,
