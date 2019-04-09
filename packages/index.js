@@ -3,7 +3,6 @@ import Layout from './layout/index'
 import 'normalize.css/normalize.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import './styles/index.scss' // global css
-import './icons' // icon
 // 以数组的结构保存组件，便于遍历
 const components = [
   Layout

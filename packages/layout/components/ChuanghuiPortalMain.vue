@@ -1,11 +1,6 @@
 <template>
   <section class="chuanghui-portal-main">
-    <transition name="fade-transform" mode="out-in">
-      <!-- or name="fade" -->
-      <!-- <router-view :key="key"></router-view> -->
-      <!-- <router-view/> -->
-      <slot></slot>
-    </transition>
+    <slot></slot>
   </section>
 </template>
 
